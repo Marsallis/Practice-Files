@@ -14,3 +14,4 @@ while True:
 mysock.close()
 
 #Protocol to sockets
+#Python3 socket1.py on mac
