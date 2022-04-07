@@ -3,10 +3,6 @@ import urllib.request, urllib.parse, urllib.error
 import xml.etree.ElementTree as ET
 import ssl
 
-# If you have a Google Places API key, enter it here
-# api_key = 'AIzaSy___IDByT70'
-# https://developers.google.com/maps/documentation/geocoding/intro
-
 # Ignore SSL certificate errors
 ctx = ssl.create_default_context()
 ctx.check_hostname = False
