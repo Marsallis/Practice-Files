@@ -18,18 +18,19 @@ uh = urllib.request.urlopen(url, context=ctx)
 
 data = uh.read()
 print('Retrieved', len(data), 'characters')
-#print(data.decode())
+data = data.decode()
 tree = ET.fromstring(data)
 
 counts = tree.findall('.//count')
-
 print(counts)
-print('Count:',len(counts))
-print('Sum:', )
 
 sum = 0
 for item in counts:
-    print('count', item.find('count'))
+    print('count', item.find('count')) 
+
+
+print('Count:',len(counts))
+print('Sum:', )
 
 
 
@@ -37,22 +38,5 @@ for item in counts:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#test URL: http://py4e-data.dr-chuck.net/comments_42.xml
-#answer URL: http://py4e-data.dr-chuck.net/comments_1506526.xml
+#test URL: http://py4e-data.dr-chuck.net/comments_42.xml (Sum=2553)
+#answer URL: http://py4e-data.dr-chuck.net/comments_1506526.xml (Sum ends with 88)
