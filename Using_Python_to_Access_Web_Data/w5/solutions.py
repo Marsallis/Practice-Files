@@ -18,15 +18,17 @@ data = data.decode()
 tree = ET.fromstring(data)
 
 counts = tree.findall('.//count')
-print(counts)
+#print(counts)
 
 sum = 0
 for item in counts:
-    print('count', item.find('count')) 
+    #print('count', item.text)
+    x = int(item.text)
+    sum = sum + x 
 
 
 print('Count:',len(counts))
-print('Sum:', )
+print('Sum:', sum)
 
 
 
